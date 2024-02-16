@@ -1,0 +1,78 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    background-color: #000000;
+    color: #f2f2f2;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px;
+}
+
+.headerNavList {
+    display: flex;
+    list-style: none;
+    margin-right: 0; /* Corregido de 'center' a '0' */
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.headerTitleContainer {
+    margin-right: 40px;
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.headerLogo {
+    height: 80px;
+    width: auto; /* Asegura que el logo mantenga su proporción */
+}
+
+@media (max-width: 767px) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .headerNavList {
+        flex-direction: column; /* Alinea los elementos de navegación verticalmente */
+        margin-top: 10px; /* Espaciado entre logo y elementos de navegación */
+    }
+
+    .headerLogo {
+        height: 60px; /* Reduce el tamaño del logo en pantallas pequeñas */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .headerTitleContainer {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    }
+}
+.chatLogo {
+    max-width: 80%; /* Asegura que el logo no sea más ancho que su contenedor */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+@media (max-width: 600px) {
+    .chatLogo {
+        width: 60%; /* Reduce el tamaño del logo en pantallas pequeñas */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .chatLogo {
+        width: 70%; /* Ajuste para tabletas y pantallas medianas */
+    }
+}
